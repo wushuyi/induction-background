@@ -31,6 +31,7 @@ var touthStartListener = function (evt) {
         clearTimeout(touchLockTimer);
     }
     if (anim) {
+        anim.pause();
         createjs.Tween.removeTweens(anim);
         var val = $el.scrollImg.get(0).style.backgroundPositionX.split('px')[0];
         bgOffset.X = parseInt(val);
